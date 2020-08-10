@@ -19,6 +19,8 @@
 			tagline="Everyday spaces &bull; <br> brand new perspective"
 		></PhotoFeatured>
 
+		<Photo></Photo>
+
 	</fragment>
 </template>
 
@@ -27,6 +29,7 @@
 	import Pano from './components/Pano.vue'
 	import PhotoFeatured from './components/PhotoFeatured.vue'
 	import PhotoList from './components/PhotoList.vue'
+	import Photo from './components/Photo.vue'
 
 	export default {
 		name: 'App',
@@ -35,6 +38,7 @@
 			Pano,
 			PhotoFeatured,
 			PhotoList,
+			Photo,
 		}
 	}
 </script>

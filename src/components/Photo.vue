@@ -1,0 +1,142 @@
+<template>
+	<fragment>
+		<aside class="photo" v-if="photo" @click="close()">
+			<h2 class="hide">Selected photo</h2>
+			
+			<figure class="photo-inner" :class="{ 'visible': visible }">
+				<img :src="photo.url" :alt="photo.alt" @load="onLoad()" @error="onError()">
+				<button @click="close()">close</button>
+			</figure>
+			<aside class="photo-placeholder" :class="{ 'visible': !visible }" role="status">
+				loading image...
+			</aside>
+		</aside>
+	</fragment>
+</template>
+
+<script>
+	export default {
+		data: () => {
+			return {
+				visible: false,
+				photo: null,
+			}
+		},
+
+		watch: {
+			'$store.state.photo': function(newPhoto) {
+				this.photo = newPhoto; 
+				this.visible = true;
+				console.log(this.photo);
+			}
+		},
+
+		methods: {
+			close() {
+				this.photo = null;
+				this.visible = false;
+			},
+
+			onLoad() {
+				this.visible = true;
+			},
+
+			onError() {
+				this.visible = false;
+				window.alert('Could not load image '+this.photo.url);
+				this.photo = null;
+			}
+		},
+	}
+</script>
+
+<style scoped>
+	.photo {
+		z-index: 50;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0,0,0,.8);
+	}
+
+	.photo-inner {
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+		opacity: 0;
+		transition: .2s opacity;
+		z-index: 100;
+	}
+
+	.photo-inner.visible {
+		opacity: 1;
+	}
+
+	.photo-placeholder {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 100%;
+		height: 2rem;
+		color: #eee;
+		text-align: center;
+		font-size: 2rem;
+		margin-top: -1rem;
+		z-index: 60;
+		opacity: 0;
+		transition: .2s opacity;
+	}
+
+	.photo-placeholder.visible {
+		opacity: 1;
+	}
+
+	.photo-inner button {
+		position: absolute;
+		top: .3rem;
+		right: .3rem;
+		width: 2.5rem;
+		height: 2.5rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		background: #ddd;
+		color: #ddd;
+		cursor: pointer;
+		border-radius: 0 .3rem 0 0;
+		opacity: .5;
+	}
+
+	.photo-inner button:before,
+	.photo-inner button:after {
+		position: absolute;
+		content: '';
+		width: 70%;
+		margin-left: 17%;
+		height: .3rem;
+		background: #000;
+	}
+
+	.photo-inner button:before {
+		transform: rotate(45deg);
+	}
+
+	.photo-inner button:after {
+		transform: rotate(-45deg);
+	}
+
+	.photo-inner button:hover {
+		opacity: 1;
+	}
+
+	.photo img {
+		width: 80vw;
+		border: .3rem solid #ddd;
+		border-radius: .6rem;
+		box-shadow: 0 0 1rem rgba(0,0,0,.5);
+		image-rendering: crisp-edges;
+	}
+</style>
