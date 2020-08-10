@@ -29,7 +29,7 @@
 
 		methods: {
 			select(url, alt) {
-				this.eventBusService.push('photoSelect', {
+				this.$store.dispatch('photoSelect', {
 					url: url,
 					alt: alt
 				});
