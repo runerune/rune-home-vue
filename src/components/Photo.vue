@@ -26,8 +26,6 @@
 		watch: {
 			'$store.state.photo': function(newPhoto) {
 				this.photo = newPhoto; 
-				this.visible = true;
-				console.log(this.photo);
 			}
 		},
 
