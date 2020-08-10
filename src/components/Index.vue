@@ -1,0 +1,111 @@
+<template>
+	<header class="intro-wrapper">
+		<section class="intro">
+			<h1>HORIZON ⚫ PHOTOGRAPHY</h1>
+			<img src="../assets/logo.svg" alt="Website logo">
+		</section>
+		<div class="intro-chevron" role="presentation"></div>
+	</header>
+</template>
+
+<script>
+export default {
+	name: 'Index',
+}
+</script>
+
+<style scoped>
+	.intro-wrapper {
+		width: 100%;
+		height: 100%;
+	}
+
+	.intro {
+		position: absolute;
+		top: 45%;
+		left: 50%;
+		z-index: 50;
+		height: 32vh;
+		width: 32vh;
+		display: block;
+		background: rgba(255,255,255,.4);
+		backdrop-filter: blur(.5rem);
+		border-radius: 32vh;
+		margin: -16vh 0 0 -16vh;
+		box-shadow: 0 0 1rem rgba(0,0,0,.5), inset 0 0 3.5rem 3.5rem rgba(255,255,255,.76);
+	}
+
+	.intro h1 { 
+		position: absolute;
+		text-indent: -1000vw;
+	}
+
+	.intro img {
+		height: 100%;
+		margin: 9.6vh auto 0;
+		height: 10vh;
+		display: block;
+		position: relative;
+	}
+
+	.intro-chevron:before {
+		content: '';
+		width: 1rem;
+		height: 1rem;
+		border-width: .5rem .5rem 0 0;
+		border-style: solid;
+		border-color: #fff;
+		vertical-align: top;
+		transform: rotate(135deg);
+		display: inline-block;
+		position: absolute;
+		top: 80%;
+		opacity: .8;
+		left: 50%;
+		margin-left: -.5rem;
+		animation: bounce 2s linear infinite;
+	}
+
+	@keyframes bounce {
+		0% { 
+			opacity: 0;
+		}
+		15% { 
+			opacity: .8;
+		}
+		100% { 
+			margin-top: 4rem;
+			opacity: 0;
+			transform: rotate(135deg) scale(2);
+		}
+	}
+
+	@media only screen and (max-width: 1000px) {
+		.intro {
+			height: 44vh;
+			width: 44vh;
+			margin: -22vh 0 0 -22vh;
+		}
+
+		.intro img {
+			margin: 13.8vh auto 0;
+			height: 12vh;
+		}
+
+		.intro-chevron:before {
+			top: 70%;
+		}
+	}
+
+	@media only screen and (max-width: 1000px) and (orientation: landscape) {
+		.intro-chevron:before {
+			top: 70%;
+		}
+	}
+
+	@media only screen and (max-width: 1000px) and (orientation: portrait) {
+		.intro-chevron:before {
+			top: 75%;
+		}
+	}
+</style>
