@@ -1,7 +1,7 @@
 <template>
 	<fragment>
-		<Pano></Pano>
-		<Index></Index>
+		<Pano/>
+		<Index/>
 
 		<PhotoFeatured
 			url="assets/featured/operator.jpg" 
@@ -10,7 +10,7 @@
 			tagline="Break the limits <br> of imagination"
 		></PhotoFeatured>
 
-		<PhotoList></PhotoList>
+		<PhotoList/>
 
 		<PhotoFeatured
 			url="assets/featured/trams-edit.jpg" 
@@ -19,7 +19,9 @@
 			tagline="Everyday spaces &bull; <br> brand new perspective"
 		></PhotoFeatured>
 
-		<Photo></Photo>
+		<Photo/>
+		<Video/>
+		<Footer/>
 
 	</fragment>
 </template>
@@ -30,6 +32,8 @@
 	import PhotoFeatured from './components/PhotoFeatured.vue'
 	import PhotoList from './components/PhotoList.vue'
 	import Photo from './components/Photo.vue'
+	import Video from './components/Video.vue'
+	import Footer from './components/Footer.vue'
 
 	export default {
 		name: 'App',
@@ -39,6 +43,8 @@
 			PhotoFeatured,
 			PhotoList,
 			Photo,
+			Video,
+			Footer,
 		}
 	}
 </script>
