@@ -16,7 +16,7 @@
 
 	@-moz-document url-prefix() {
 		.video {
-			background: url('^assets/blur-fallback.jpg') top fixed no-repeat;
+			background: url('/assets/blur-fallback.jpg') top fixed no-repeat;
 			background-size: cover;
 			backdrop-filter: none;
 		}
@@ -24,7 +24,7 @@
 
 	@media only screen and (max-width: 720px) {
 		.video {
-			background: url('^assets/blur-fallback.jpg') top fixed no-repeat;
+			background: url('/assets/blur-fallback.jpg') top fixed no-repeat;
 			background-size: cover;
 			backdrop-filter: none;
 		}
