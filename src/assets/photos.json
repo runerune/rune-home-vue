@@ -1,0 +1,62 @@
+[
+	{
+		"url": "assets/photos/katowice-bricks.jpg",
+		"thumb": "assets/photos/thumb/katowice-bricks.jpg",
+		"alt": "Aerial photo of four buildings of Silesia Business Park in Katowice during a sunny midday"
+	},
+	{
+		"url": "assets/photos/chorzow-park.jpg",
+		"thumb": "assets/photos/thumb/chorzow-park.jpg",
+		"alt": "Aerial image of the Silesian Park forests with the Silesian Stadium far in the backgronud during overcast."
+	},
+	{
+		"url": "assets/photos/katowice-altus.jpg",
+		"thumb": "assets/photos/thumb/katowice-altus.jpg",
+		"alt": "Altus Skyscraper in Katowice"
+	},
+	{
+		"url": "assets/photos/katowice-monastery.jpg",
+		"thumb": "assets/photos/thumb/katowice-monastery.jpg",
+		"alt": "Aerial shot of the front of Neo-roman basilica in Katowice Panewniki in early summer"
+	},
+	{
+		"url": "assets/photos/plawniowice-palace.jpg",
+		"thumb": "assets/photos/thumb/plawniowice-palace.jpg",
+		"alt": "Aerial photo of the Plawniowice palace."
+	},
+	{
+		"url": "assets/photos/katowice-center.jpg",
+		"thumb": "assets/photos/thumb/katowice-center.jpg",
+		"alt": "Photo of Katowice downtown featuring the Spodek Hall, Silesian Insurgents' Monument, .KTW Towers and the roundabout itself"
+	},
+	{
+		"url": "assets/photos/chorzow-stadium.jpg",
+		"thumb": "assets/photos/thumb/chorzow-stadium.jpg",
+		"alt": "Aerial photo of the Silesian Stadium in Chorzow. Katowice's Millennial District visible in the background."
+	},
+	{
+		"url": "assets/photos/krakow-square.jpg",
+		"thumb": "assets/photos/thumb/krakow-square.jpg",
+		"alt": "Panorama of Krakow Main Square with  St. Mary's Basilica and Cloth Hall visible."
+	},
+	{
+		"url": "assets/photos/moszna-palace.jpg",
+		"thumb": "assets/photos/thumb/moszna-palace.jpg",
+		"alt": "Aerial photo of the Moszna palace."
+	},
+	{
+		"url": "assets/photos/pszczyna-palace.jpg",
+		"thumb": "assets/photos/thumb/pszczyna-palace.jpg",
+		"alt": "Aerial photo of the Pszczyna palace."
+	},
+	{
+		"url": "assets/photos/katowice-museum.jpg",
+		"thumb": "assets/photos/thumb/katowice-museum.jpg",
+		"alt": "Aerial photo of Silesian Museum in Katowice featuring the Warszawa mine shaft."
+	},
+	{
+		"url": "assets/photos/ogrodzieniec-fields.jpg",
+		"thumb": "assets/photos/thumb/ogrodzieniec-fields.jpg",
+		"alt": "Aerial photo of a yellow Canola field near Ogrodzieniec, Poland"
+	}	
+]
