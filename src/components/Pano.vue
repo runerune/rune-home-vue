@@ -4,58 +4,54 @@
 
 <script>
 
-import 'pannellum/build/pannellum.js';
-import 'pannellum/build/pannellum.css';
+	import 'pannellum/build/pannellum.js';
+	import 'pannellum/build/pannellum.css';
 
-export default {
-	name: 'Index',
-
-	data: () => {
-		return {
-			pano: undefined
-		}
-	},
-
-	methods: {
-		getHfov: (width) => {
-			if(width < 1000) return 60;
-			if(width < 1400) return 80;
-
-			return 100;
+	export default {
+		data: () => {
+			return {
+				pano: undefined
+			}
 		},
 
-		getUrl: (width) => {
-			if(width <= 640) return require('../assets/pano-background-small.jpg');
-			return require('../assets/pano-background.jpg');
-		}
-	},
+		methods: {
+			getHfov: (width) => {
+				if(width < 1000) return 60;
+				if(width < 1400) return 80;
 
-	mounted: function() {
-		// eslint-disable-next-line no-undef
-		this.pano = pannellum.viewer('pano-container', {
-			type: 'equirectangular',
-			panorama: this.getUrl(window.innerWidth),
-			preview: require('../assets/pano-preview.jpg'),
-			keyboardZoom: false,
-			disableKeyboardCtrl: true,
-			mouseZoom: false,
-			friction: 0.01,
-			pitch: -25,
-			yaw: 10,
-			maxPitch: 38,
-			autoRotate: -2,
-			autoLoad: true,
-			autoRotateInactivityDelay: 3*1000,
-			autoRotateStopDelay: 1,
-			showControls: false,
-			draggable: false,
-			hfov: this.getHfov(window.innerWidth),
-		});
-	},
+				return 100;
+			},
 
+			getUrl: (width) => {
+				if(width <= 640) return 'assets/pano-background-small.jpg';
+				return 'assets/pano-background.jpg';
+			}
+		},
 
+		mounted: function() {
+			// eslint-disable-next-line no-undef
+			this.pano = pannellum.viewer('pano-container', {
+				type: 'equirectangular',
+				panorama: this.getUrl(window.innerWidth),
+				preview: 'assets/pano-preview.jpg',
+				keyboardZoom: false,
+				disableKeyboardCtrl: true,
+				mouseZoom: false,
+				friction: 0.01,
+				pitch: -25,
+				yaw: 10,
+				maxPitch: 38,
+				autoRotate: -2,
+				autoLoad: true,
+				autoRotateInactivityDelay: 3*1000,
+				autoRotateStopDelay: 1,
+				showControls: false,
+				draggable: false,
+				hfov: this.getHfov(window.innerWidth),
+			});
+		},
 
-}
+	}
 </script>
 
 <style scoped>

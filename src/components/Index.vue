@@ -2,17 +2,11 @@
 	<header class="intro-wrapper">
 		<section class="intro">
 			<h1>HORIZON ⚫ PHOTOGRAPHY</h1>
-			<img src="../assets/logo.svg" alt="Website logo">
+			<img src="assets/logo.svg" alt="Website logo">
 		</section>
 		<div class="intro-chevron" role="presentation"></div>
 	</header>
 </template>
-
-<script>
-export default {
-	name: 'Index',
-}
-</script>
 
 <style scoped>
 	.intro-wrapper {
